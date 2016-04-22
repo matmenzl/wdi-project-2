@@ -22,7 +22,11 @@ class PostsController < ApplicationController
   end
 
   def edit
+    if current_user.id == @post.user.id
     @post = Post.find(params[:id])
+  else 
+    render "signup"
+  end
   end
 
   def update
