@@ -1,76 +1,93 @@
 <div class="row">
   <div class="small-9 small-centered medium-6 medium-centered large-6 large-centered columns">
 
-    <form>
-      <div class="row column log-in-form">
-        <h4 class="text-center">Sign up for Meet Your Street</h4>
-        
-      
+<h4 class="text-center">Sign up for Meet Your Street</h4>        
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
- <label>Email<input type="text" placeholder="somebody@example.com">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </label>
-
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :first_name %><br />
+<form>
+  <div class="row">
+    <div class="large-12 columns">
+    <label>Email<input type="text" placeholder="somebody@example.com">
+        <%= f.email_field :email, autofocus: true %>
+      </label>
+    </div>
+    <div class="large-12 columns">
+    <label>First Name<input type="text" placeholder="First Name">
     <%= f.text_field :first_name, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last_name %><br />
+      </label>
+    </div>
+    <div class="large-12 columns">
+    <label>Last Name<input type="text" placeholder="Last Name">
     <%= f.text_field :last_name, autocomplete: "off" %>
+      </label>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :user_image %><br />
+  <div class="row">
+    <div class="large-6 columns">
+    <div class="field">
     <%= f.file_field :user_image %>
+    </div>
+    </div>
+    <div class="large-6 columns">
+    <%= f.text_field :remote_user_image_url %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :remote_user_image_url %><br />
-   <%= f.text_field :remote_user_image_url %>
-  </div>
 
-  <div class="field">
-    <%= f.label :street %><br />
+    <div class="large-12 columns">
+    <label>Street<input type="text" placeholder="Streetname">
     <%= f.text_field :street, autocomplete: "off" %>
-  </div>
+      </label>
+    </div>
 
-  <div class="field">
-    <%= f.label :city %><br />
+    <div class="large-12 columns">
+    <label>City<input type="text" placeholder="e.g. London">
     <%= f.text_field :city, autocomplete: "off" %>
-  </div>
+      </label>
+    </div>
 
-  <div class="field">
-    <%= f.label :zip %><br />
+    <div class="large-12 columns">
+    <label>ZIP Code<input type="text" placeholder="e.g. E9 5EA">
     <%= f.text_field :zip, autocomplete: "off" %>
-  </div>
+      </label>
+    </div>
 
+
+  <div class="row">
+    <div class="large-6 columns">
+    <div class="field">
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+    </div>
+    <div class="large-6 columns">
+       <%= f.label :password_confirmation %>
+       <%= f.password_field :password_confirmation, autocomplete: "off" %>
+       <%= f.label :password %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Select Box
+        <select>
+          <option value="husker">I offer</option>
+          <option value="starbuck">I look for</option>
+        </select>
+      </label>
+    </div>
+  </div>
+</div>
+
+</form>
   <p class="button expanded"><%= f.submit "Sign up" %></p>
     
-<% end %>
 
 <%= render "devise/shared/links" %>
+<% end %>
 
-
-  </div>
-</form>
   </div>
 </div>
