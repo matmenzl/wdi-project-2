@@ -3,4 +3,7 @@ class Post < ActiveRecord::Base
 
   validates :title, presence: true, length: { in: 5..500 }
   validates :image, presence: true
+
+  mount_uploader :image, MeetyourstreetUploader
+
 end

@@ -32,6 +32,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :user_image %><br />
+    <%= f.file_field :user_image %>
+  </div>
+
+  <div class="field">
     <%= f.label :street %><br />
     <%= f.text_field :street, autocomplete: "off" %>
   </div>
