@@ -8,9 +8,13 @@
 
 <div class="actions">
   <%= link_to "Edit Profile", edit_user_path %>
-  <%= link_to "Edit Account", edit_user_registration_path %>
-  
+  <%= link_to "Edit Account", edit_user_registration_path %>  
 </div>
+
+<div>
+<%= render @user.posts %>
+</div>
+
 
 
 

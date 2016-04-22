@@ -1,0 +1,30 @@
+<h1>Add Post</h1>
+<%= form_for @post do |f| %>
+  <% if @post.errors.any? %>
+    <% for message in @post.errors.full_messages %>
+      <div class="alert alert-danger" role="alert">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_area :image %>
+  </div>
+  <div class="field">
+    <%= f.label :post_type %>
+    <%= f.text_field :post_type %>
+  </div>
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.number_field :price, step: 0.01 %>
+  </div>
+
+  <%= f.submit %>
+
+<% end %>
