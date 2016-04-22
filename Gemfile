@@ -51,3 +51,4 @@ gem 'rails_12factor', group: :production
 gem 'foundation-rails', '~> 5.5.3'
 gem 'devise'
 gem 'carrierwave', '0.10.0'
+gem 'rmagick'
