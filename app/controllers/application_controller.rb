@@ -8,4 +8,15 @@ class ApplicationController < ActionController::Base
     root_path
   end
   
+  class ApplicationController < ActionController::Base
+    before_action :configure_permitted_parameters, if: :devise_controller?
+
+    protected
+
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :username, :first_name, :last_name, :street, :zip, :city) }
+    end
+  end
+
+
 end
