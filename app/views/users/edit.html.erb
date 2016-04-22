@@ -1,0 +1,32 @@
+<h1>Edit</h1>
+<%= form_for @user do |f| %>
+
+<div class="field">
+  <%= f.label :first_name %><br />
+  <%= f.text_field :first_name, autocomplete: "off" %>
+</div>
+
+<div class="field">
+  <%= f.label :last_name %><br />
+  <%= f.text_field :last_name, autocomplete: "off" %>
+</div>
+
+<div class="field">
+  <%= f.label :street %><br />
+  <%= f.text_field :street, autocomplete: "off" %>
+</div>
+
+<div class="field">
+  <%= f.label :city %><br />
+  <%= f.text_field :city, autocomplete: "off" %>
+</div>
+
+<div class="field">
+  <%= f.label :zip %><br />
+  <%= f.text_field :zip, autocomplete: "off" %>
+</div>
+<div class="actions">
+  <%= f.submit "Save" %>
+</div>
+
+<% end %>
