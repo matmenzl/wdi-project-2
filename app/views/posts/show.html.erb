@@ -20,7 +20,13 @@
 </div>
 
 <div>
-<%= link_to "Profile", current_user %></div>
+<%= link_to "Profile", current_user %>
+</div>
 
+<div>
+<%= render partial: 'comments/form', locals: { commentable: @post } %>
+</div>
 
-<!-- TO DO comments -->
+<div>
+<%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @post } %>
+</div>
