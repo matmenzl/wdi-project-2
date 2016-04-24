@@ -12,16 +12,12 @@
     <h5><span>Date:</span><br><%= @post.created_at %></h5>
   </div>
 </div>
-
-<!-- TO DO show buttons only to the owner of the post -->
-
-<div class="actions">
-  <%= link_to "Edit Post", edit_post_path %>
-</div>
-
-<div>
+  
+<% if @post.user == current_user %>
+<%= link_to "Edit Post", edit_post_path %>
+<%= link_to "Destroy", @post, method: :delete, data: {confirm: "Are you sure you want to Delete the Post?"} %>
 <%= link_to "Profile", current_user %>
-</div>
+<% end %>
 
 <div>
 <%= render partial: 'comments/form', locals: { commentable: @post } %>

@@ -55,4 +55,4 @@ gem 'rmagick'
 gem 'ransack'
 gem 'acts_as_commentable', '4.0.2'
 gem 'font-awesome-sass', '~> 4.5.0'
-
+gem 'masonry-rails'

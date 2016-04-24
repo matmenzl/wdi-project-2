@@ -12,8 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require masonry/jquery.masonry
 //= require foundation
 //= require turbolinks
+//= require isotope/jquery.isotope
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
