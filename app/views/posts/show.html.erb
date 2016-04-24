@@ -1,9 +1,19 @@
-<h1>Post</h1>
-<%= @post.title %>
-<%= link_to image_tag(@post.image.thumb.url), @post.image.url %>
-<%= @post.post_type %>
-<%= @post.price %>
+<div class="media-object stack-for-small">
+  <div class="media-object-section">
+    <div class="thumbnail">
+    <%= link_to image_tag(@post.image.url), @post.image.url %>   
+    </div>
+  </div>
+  </div>
+  <div class="media-object-section">
+    <h4><span>What:</span><br><%= @post.title %></h4>
+    <h5><span>Post Type:</span><br><%= @post.post_type %></h5>
+    <h5><span>Money:</span><br><%= @post.price %></h5>
+    <h5><span>Date:</span><br><%= @post.created_at %></h5>
+  </div>
+</div>
 
+<!-- TO DO show buttons only to the owner of the post -->
 
 <div class="actions">
   <%= link_to "Edit Post", edit_post_path %>
@@ -11,3 +21,6 @@
 
 <div>
 <%= link_to "Profile", current_user %></div>
+
+
+<!-- TO DO comments -->

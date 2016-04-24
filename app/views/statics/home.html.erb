@@ -10,12 +10,22 @@
 </div>
 <div class="row">
   <div class="medium-8 medium-centered columns data-equalizer-watch"></div>
+  <%= search_form_for @q do |f| %>
   <form>
     <fieldset>
-      <legend>Check Whats Going on in your Neighbourhood</legend>
+      <legend>Check Who else from your Neighbourhood is on Meet Your Street</legend>
       <label>
-        <input type="text" placeholder="Type in your City">
+          <p>
+            <%= f.label :street_cont %>
+            <%= f.search_field :street_cont %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
       </label>
     </fieldset>
   </form>
+  <% end %>
 </div>
+
+

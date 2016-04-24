@@ -5,6 +5,11 @@ class ApplicationController < ActionController::Base
 
   before_filter :authenticate_user!, except: [:home, :signup, :register]
 
+  def index
+    @q = Post.search(params[:q])
+    @posts = @q.result(distinct: true)
+  end
+
   protected
   def after_sign_in_path_for(resource)
     root_path
