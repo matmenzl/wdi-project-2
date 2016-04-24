@@ -10,16 +10,38 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  *= require foundation_and_overrides
  *= require 'masonry/infinitescroll'
  *= require 'masonry/transitions'
+ *= require_tree .
+ *= require_self
+
  */
 
+.log-in-form {
+  border: 1px solid #cacaca;
+  padding: 1rem;
+  border-radius: 3px; 
+  }
 
- .log-in-form {
-   border: 1px solid #cacaca;
-   padding: 1rem;
-   border-radius: 3px; }
+#posts {
+  margin: 0 auto;
+}
+
+.box {
+display:inline-block;  
+margin: 5px;
+width: 214px;
+}
+
+.box img {
+  width: 100%;
+}
+
+
+
+
+
+
+
 

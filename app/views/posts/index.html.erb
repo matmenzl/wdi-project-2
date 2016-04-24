@@ -1,18 +1,14 @@
-<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+<div id="posts" class="transitions-enabled">
+<div class="box">
+
 <% @posts.each do |post| %>
-<div class="media-object stack-for-small">
-  <div class="media-object-section">
-    <div class="thumbnail">
     <%= link_to image_tag(post.image.url), post.image.url %>   
-    </div>
-  </div>
-  </div>
-  <div class="media-object-section">
-    <h4><span>What:</span><br><%= post.title %></h4>
-    <h5><span>Post Type:</span><br><%= post.post_type %></h5>
-    <h5><span>Money:</span><br><%= post.price %></h5>
-    <h5><span>Date:</span><br><%= post.created_at %></h5>
-  </div>
+    <p><span>What:</span><br><%= post.title %></p>
+    <p><span>Post Type:</span><br><%= post.post_type %></p>
+    <p><span>Money:</span><br><%= post.price %></p>
+    <p><span>Date:</span><br><%= post.created_at %></p>
   <% end %>
+  </div>
+
 </div>
 

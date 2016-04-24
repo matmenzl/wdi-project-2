@@ -18,4 +18,8 @@
 //= require isotope/jquery.isotope
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){ 
+  $(document).foundation(); 
+
+
+});
