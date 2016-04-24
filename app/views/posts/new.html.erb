@@ -1,4 +1,4 @@
-<h1>Add Post</h1>
+<div class="row">
 <%= form_for @post do |f| %>
   <% if @post.errors.any? %>
     <% for message in @post.errors.full_messages %>
@@ -14,7 +14,7 @@
   </div>
   <div class="field">
     <%= f.label :image %>
-    <%= f.file_field :image %>
+    <%= f.file_field :image, class: "file-upload" %>
   </div>
 
   <div class="field">
@@ -24,13 +24,15 @@
 
   <div class="field">
     <%= f.label :post_type %>
-    <%= f.text_field :post_type %>
+    <%= f.select :post_type, ['I look_for', 'I offer'] %>
   </div>
+  
   <div class="field">
     <%= f.label :price %>
     <%= f.number_field :price, step: 0.01 %>
   </div>
 
-  <%= f.submit %>
+ <%= f.submit "Add Post", class: "button radius" %>
 
 <% end %>
+</div>

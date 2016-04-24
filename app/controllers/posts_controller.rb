@@ -8,13 +8,11 @@ class PostsController < ApplicationController
     end
   end
 
-  # def index
-  #   @posts = Post.all
-  # end
+#restrict view to post index to users with street current user has signed up with
+#connect user_id from posts table with street and User of user-table
 
   def index
-    @q = Post.search(params[:q])
-    @posts = @q.result(distinct: true)
+    @posts = Post.all
   end
 
 
@@ -38,11 +36,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    if current_user.id == @post.user.id
-      @post = Post.find(params[:id])
-    else 
-      render "signup"
-    end
+    @post = Post.find(params[:id])
   end
 
   def update
@@ -56,11 +50,6 @@ class PostsController < ApplicationController
 
   def destroy
   end
-
-  before_filter :require_permission, only: :edit
-
-
-
 
   private
       def post_params

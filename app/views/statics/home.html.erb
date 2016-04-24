@@ -1,15 +1,18 @@
 <div class="row">
-  <div class="medium-4 columns data-equalizer">
-    Connect With your Neighbours and organize your daily life
+<div>
+  <div class="medium-4 columns data-equalizer info"><i class="fa fa-users fa-3" aria-hidden="true"></i><br>Connect with your neighbours and get things done
   </div>
-  <div class="medium-4 columns data-equalizer-watch">Only real neighbours are allowed</div>
-  <div class="medium-4 columns data-equalizer-watch">Your posts are only accessible by your neighbours</div>
+</div>
+  <div class="medium-4 columns data-equalizer-watch info"><i class="fa fa-check" aria-hidden="true"></i><br>Only real neighbours are allowed
+  </div>
+  <div class="medium-4 columns data-equalizer-watch info"><i class="fa fa-lock fa-3" aria-hidden="true"></i><br>Your posts are only accessible by your neighbours
+  </div>
 </div>
 <div class="row">
-  <div class="medium-8 medium-centered columns data-equalizer-watch">Add a Post</div>
+  <div class="medium-12 medium-centered columns data-equalizer-watch add"><i class="fa fa-plus fa-3" aria-hidden="true"></i><br><%= link_to "Add Post", new_post_path %></div>
 </div>
 <div class="row">
-  <div class="medium-8 medium-centered columns data-equalizer-watch"></div>
+  <div class="medium-12 medium-centered columns data-equalizer-watch"></div>
   <%= search_form_for @q do |f| %>
   <form>
     <fieldset>
