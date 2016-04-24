@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+  before_filter :require_permission, only: :edit
+
+  def require_permission
+    if current_user != User.find(params[:id]) 
+      flash[:warning] = "Naughty you! You cannot edit profiles of other users."
+      redirect_to root_path
+    end
+  end
+
   def index
     @users = User.all
   end

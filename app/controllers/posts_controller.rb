@@ -1,7 +1,22 @@
 class PostsController < ApplicationController
-  def index
-    @posts = Post.all
+  before_filter :require_permission, only: :edit
+
+  def require_permission
+    if current_user != Post.find(params[:id]).user 
+      flash[:warning] = "Naughty you! You cannot edit posts of other users."
+      redirect_to root_path
+    end
   end
+
+  # def index
+  #   @posts = Post.all
+  # end
+
+  def index
+    @q = Post.search(params[:q])
+    @posts = @q.result(distinct: true)
+  end
+
 
   def new
     @post = Post.new
@@ -23,10 +38,10 @@ class PostsController < ApplicationController
 
   def edit
     if current_user.id == @post.user.id
-    @post = Post.find(params[:id])
-  else 
-    render "signup"
-  end
+      @post = Post.find(params[:id])
+    else 
+      render "signup"
+    end
   end
 
   def update
@@ -40,6 +55,10 @@ class PostsController < ApplicationController
 
   def destroy
   end
+
+  before_filter :require_permission, only: :edit
+
+
 
 
   private

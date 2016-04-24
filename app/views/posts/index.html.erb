@@ -1,2 +1,18 @@
 <h1>All Posts</h1>
-    <%= render @posts %>
+<% @posts.each do |post| %>
+<div class="media-object stack-for-small">
+  <div class="media-object-section">
+    <div class="thumbnail">
+    <%= link_to image_tag(post.image.url), post.image.url %>    
+    </div>
+  </div>
+  </div>
+  <div class="media-object-section">
+    <h4><span>What:</span><br><%= post.title %></h4>
+    <h5><span>Post Type:</span><br><%= post.post_type %></h5>
+    <h5><span>Money:</span><br><%= post.price %></h5>
+    <h5><span>Date:</span><br><%= post.created_at %></h5>
+  </div>
+  <% end %>
+</div>
+
