@@ -15,7 +15,6 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-
   def new
     @post = Post.new
   end
@@ -52,7 +51,7 @@ class PostsController < ApplicationController
   end
 
   private
-      def post_params
-          params.require(:post).permit(:title, :post_type, :image, :price, :remote_image_url)
-      end
+    def post_params
+        params.require(:post).permit(:title, :post_type, :image, :price, :remote_image_url)
+    end
 end

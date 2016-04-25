@@ -1,5 +1,10 @@
 class CommentsController < ApplicationController
   before_action :set_commentable
+
+  def show
+    @post = Post.find(params[:id])
+    @comments = @post.comments
+  end
   
   def create
     @comment = @commentable.comments.build(comments_params)

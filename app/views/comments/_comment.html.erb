@@ -1,8 +1,10 @@
-<li>
-  <ul>
-    <li><%= comment.user.try(:name) %></li>
-    <li><%= comment.title %></li>
-    <li><%= comment.comment %></li>
-    <li><%= link_to 'Delete Comment', comment_path(comment, commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
-  </ul>
-</li> 
+<!--     add user_image and contact-link to comment
+ -->
+<h1>All Comments</h1>
+    <%= comment.user.try(:first_name) %><br>
+    <%= comment.title %>
+    <%= comment.comment %>
+
+    <% if comment.user == current_user %>
+    <%= link_to 'Delete Comment', comment_path(comment, commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
