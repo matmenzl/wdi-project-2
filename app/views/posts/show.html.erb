@@ -9,6 +9,7 @@
   </div>
   </div>
   <div class="media-object-section">
+    <p><span><i class="fa fa-user"></i></span><br><%= link_to @post.user.email %></p>
     <h4><span>What:</span><br><%= @post.title %></h4>
     <h5><span>Post Type:</span><br><%= @post.post_type %></h5>
     <h5><span>Money:</span><br><%= @post.price %></h5>

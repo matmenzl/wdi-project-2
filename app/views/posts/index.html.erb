@@ -6,6 +6,7 @@
 
 <% @posts.each do |post| %>
     <%= link_to image_tag(post.image.url), post.image.url %>   
+    <p><span><i class="fa fa-user"></i></span><br><%= link_to post.user.email %></p>
     <p><span>What:</span><br><%= post.title %></p>
     <p><span>Post Type:</span><br><%= post.post_type %></p>
     <p><span>Money:</span><br><%= post.price %></p>
