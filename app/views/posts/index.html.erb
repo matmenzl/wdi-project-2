@@ -10,8 +10,8 @@
     <p><span>Post Type:</span><br><%= post.post_type %></p>
     <p><span>Money:</span><br><%= post.price %></p>
     <p><span>Date:</span><br><%= post.created_at %></p>
-<!--     <%= link_to "Comments", comments_path %>
- -->  <% end %>
+      <%= link_to "Show Detail", post_path(post) %>
+     <% end %>
   </div>
 
 </div>
