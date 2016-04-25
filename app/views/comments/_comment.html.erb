@@ -2,10 +2,12 @@
  -->
 <h3>All Comments</h3>
 
-    <%= comment.user.try(:first_name) %><br>
-    <%= comment.user.try(:user_image) %><br>
+    <%= link_to comment.user.try(:first_name), user_path %><br>
+    <%= image_tag comment.user.user_image.thumb.url %><br>
     <%= comment.created_at.to_s(:short) %><br>
     <%= comment.comment %><br>
     <% if comment.user == current_user %>
     <%= link_to 'Delete Comment', comment_path(comment, commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
+
+    <!--     add reply-option and threading -->
