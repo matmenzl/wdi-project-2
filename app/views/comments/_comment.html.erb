@@ -1,10 +1,11 @@
 <!--     add user_image and contact-link to comment
  -->
-<h1>All Comments</h1>
-    <%= comment.user.try(:first_name) %><br>
-    <%= comment.title %>
-    <%= comment.comment %>
+<h3>All Comments</h3>
 
+    <%= comment.user.try(:first_name) %><br>
+    <%= comment.user.try(:user_image) %><br>
+    <%= comment.created_at.to_s(:short) %><br>
+    <%= comment.comment %><br>
     <% if comment.user == current_user %>
     <%= link_to 'Delete Comment', comment_path(comment, commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>

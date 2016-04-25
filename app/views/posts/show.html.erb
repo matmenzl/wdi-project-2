@@ -12,7 +12,7 @@
     <h4><span>What:</span><br><%= @post.title %></h4>
     <h5><span>Post Type:</span><br><%= @post.post_type %></h5>
     <h5><span>Money:</span><br><%= @post.price %></h5>
-    <h5><span>Date:</span><br><%= @post.created_at %></h5>
+    <h5><span>Published at:</span><br><%= @post.created_at.to_s(:short) %></h5>
   </div>
 </div>
   
