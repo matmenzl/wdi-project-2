@@ -9,27 +9,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
+    <%= f.label :description %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
     <%= f.label :image %>
     <%= f.file_field :image, class: "file-upload" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :remote_image_url %><br />
-   <%= f.text_field :remote_image_url %>
+    <%= f.text_field :remote_image_url, placeholder: "Image URL" %>
   </div>
 
   <div class="field">
     <%= f.label :post_type %>
-    <%= f.select :post_type, ['I look_for', 'I offer'] %>
+    <%= f.select :post_type, ['I look for', 'I offer'] %>
   </div>
-  
+
   <div class="field">
-    <%= f.label :price %>
-    <%= f.number_field :price, step: 0.01 %>
+    <%= f.label :Money %>
+    <%= f.number_field :price, step: 0.50 %>
   </div>
 
  <%= f.submit "Add Post", class: "button radius" %>
