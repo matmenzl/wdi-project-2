@@ -28,7 +28,7 @@ class PostsController < ApplicationController
     @post.longitude = current_user.longitude
     @post.latitude = current_user.latitude
     if @post.save
-        flash[:success] = "Your service has been listed!"
+        flash[:success] = "Your post has been listed!"
         redirect_to posts_path
     else
         render "new"
@@ -42,14 +42,22 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to @post
+      redirect_to post_path
     else 
       render 'edit'
     end
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      redirect_to posts_path
+      flash[:success] = "Your post has been deleted!"
+    else
+      render @post
+      flash[:warning] = "Your post has not been deleted!"
   end
+end
 
   private
     def post_params
