@@ -10,7 +10,7 @@
     <p><span>What:</span><br><%= post.title %></p>
     <p><span>Post Type:</span><br><%= post.post_type %></p>
     <p><span>Money:</span><br><%= post.price %></p>
-    <p><span>Date:</span><br><%= post.created_at %></p>
+    <p><span>Date:</span><br><%= post.created_at.to_s(:short) %></p>
       <%= link_to "Show Detail", post_path(post) %>
      <% end %>
   </div>

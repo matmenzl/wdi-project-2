@@ -20,6 +20,8 @@ gem 'ransack'
 gem 'acts_as_commentable', '4.0.2'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'masonry-rails'
+gem 'geocoder'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
