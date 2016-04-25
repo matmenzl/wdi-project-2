@@ -7,5 +7,6 @@ class User < ActiveRecord::Base
 
   geocoded_by :street
   after_validation :geocode
+  after_update :geocode
 
 end

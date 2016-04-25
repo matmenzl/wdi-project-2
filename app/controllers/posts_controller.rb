@@ -8,10 +8,9 @@ class PostsController < ApplicationController
     end
   end
 
-#restrict view to post index to users with street current user has signed up with
-#connect user_id from posts table with street and User of user-table
-
   def index
+    #restrict view to post index to users with street current user has signed up with
+    #connect user_id from posts table with street and User of user-table
     @posts = Post.all
   end
 
@@ -26,6 +25,8 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.new(post_params)
+    @post.longitude = current_user.longitude
+    @post.latitude = current_user.latitude
     if @post.save
         flash[:success] = "Your service has been listed!"
         redirect_to posts_path
@@ -52,6 +53,6 @@ class PostsController < ApplicationController
 
   private
     def post_params
-        params.require(:post).permit(:title, :post_type, :image, :price, :remote_image_url)
+        params.require(:post).permit(:title, :post_type, :image, :price, :remote_image_url, :longitude, :latitude, :distance)
     end
 end
