@@ -5,8 +5,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable
   mount_uploader :user_image, MeetyourstreetUploader
 
-  geocoded_by :street
+  geocoded_by :address
   after_validation :geocode
   after_update :geocode
+
+  def address
+    [street, city, zip].compact.join(', ')
+  end
 
 end

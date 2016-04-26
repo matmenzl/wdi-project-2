@@ -32,6 +32,7 @@
           <h5><span>Post Type:</span><br><%= post.post_type %></h5>
           <h5><span>Money:</span><br><%= post.price %></h5>
           <h5><span>Date:</span><br><%= post.created_at %></h5>
+          <%= link_to "Show Detail", post_path(post) %>
           <% end %>
         </p>
       </p>
