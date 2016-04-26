@@ -9,8 +9,6 @@ class PostsController < ApplicationController
   end
 
   def index
-    #restrict view to post index to users with street current user has signed up with
-    #connect user_id from posts table with street and User of user-table
     @posts = Post.near([current_user.latitude, current_user.longitude], 0.5)
   end
 
