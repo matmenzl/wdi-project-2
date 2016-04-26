@@ -1,13 +1,16 @@
-<!--     add user_image and contact-link to comment
- -->
-<h3>All Comments</h3>
 
-    <%= link_to comment.user.try(:first_name), comment.user %><br>
-    <%= image_tag comment.user.user_image.thumb.url %><br>
-    <%= comment.created_at.to_s(:short) %><br>
-    <%= comment.comment %><br>
-    <% if comment.user == current_user %>
-    <%= link_to 'Delete Comment', comment_path(comment, commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% end %>
+<div class="row">
+ <div class="large-2 columns small-2 userimage"><%= image_tag comment.user.user_image.thumb.url %></div>
+ <div class="large-10 columns">
+ <p><strong><%= comment.created_at.to_s(:short) %></strong></p>
+ <p><strong><%= link_to comment.user.try(:first_name), comment.user %>: </strong><%= comment.comment %></p>
+   <ul class="inline-list">
+     <li><% if comment.user == current_user %>
+      <%= link_to 'Delete Comment', comment_path(comment, commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %></li>
+    </ul>
+  </div>
+</div>
 
-    <!--     add reply-option and threading -->
+
+<!--     add reply-option and threading -->

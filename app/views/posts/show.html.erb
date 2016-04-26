@@ -1,33 +1,38 @@
 <!-- include area posts and users belong to
  -->
 
-<div class="media-object stack-for-small">
-  <div class="media-object-section">
-    <div class="thumbnail">
-    <%= link_to image_tag(@post.image.url), @post.image.url %>   
-    </div>
-  </div>
-  </div>
-  <div class="media-object-section">
-    <p><span><i class="fa fa-user"></i></span><br><%= link_to @post.user.email %></p>
-    <h4><span>What:</span><br><%= @post.title %></h4>
-    <h5><span>Post Type:</span><br><%= @post.post_type %></h5>
-    <h5><span>Money:</span><br><%= @post.price %></h5>
-    <h5><span>Published at:</span><br><%= @post.created_at.to_s(:short) %></h5>
-    <h5>Longitude: <%= @post.longitude %></h5>
-    <h5>Latitude: <%= @post.latitude %></h5>
-  </div>
-</div>
-  
-<% if @post.user == current_user %>
-<%= link_to "Edit Post", edit_post_path %>
-<%= link_to "Destroy", @post, method: :delete, data: {confirm: "Are you sure you want to Delete the Post?"} %>
-<%= link_to "Profile", current_user %>
-<% end %>
+ <!-- Nav Sidebar -->
+     <!-- This is source ordered to be pulled to the left on larger screens -->
+     <div class="large-3 columns ">
+       <div class="panel">
+         <%= link_to image_tag(@post.image.url), @post.image.url %>
+         <h5><p><%= @post.title %></p></h5>
+           <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
+           <section class="section">
+           <h5 class="title"><i class="fa fa-user"></i> <%= link_to @post.user.try(:first_name), @post.user %></h5>
+           <h5 class="title"><i class="fa fa-paper-plane"></i> <%= mail_to @post.user.email %></h5>
+          </section>
+           <section class="section">
+             <h5 class="title"><i class="fa fa-info"></i> <%= @post.post_type %></h5>
+           </section>
+           <section class="section">
+             <h5 class="title"><i class="fa fa-usd"></i> <%= @post.price %></h5>
+           </section>
+           <section class="section">
+             <h5 class="title"><i class="fa fa-calendar-o"></i> <%= @post.created_at.to_s(:short) %></h5>
+           </section>
+         </div>
+       </div>
+     </div>
+     
+     <!-- Main Feed -->
+     <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+     <div class="large-9 columns">
+       <%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @post } %>
+       <%= render partial: 'comments/form', locals: { commentable: @post } %>
 
-<div>
-<%= render partial: 'comments/form', locals: { commentable: @post } %>
-</div>
-<div>
-<%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @post } %>
-</div>
+       </div>
+
+
+
+

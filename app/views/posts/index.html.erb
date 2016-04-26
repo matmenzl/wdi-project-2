@@ -1,27 +1,41 @@
-
-<h1>Your Neighbourhood <%= current_user.zip %> <%= current_user.city %></h1>
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{current_user.latitude}%2C#{current_user.longitude}" %>
+<div class="row">
+<div class="medium-12 columns">
+<div class="card">
+<div class="image"><!-- 
+<h1>Your Neighbourhood <%= current_user.zip %> <%= current_user.city %></h1> -->
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=1200x100&sensor=false&zoom=12&scale=4&markers=#{current_user.latitude}%2C#{current_user.longitude}" %>
+</div>
+</div>
+</div>
+</div>
+<br>
 
 <div class="row">
 <% @posts.each do |post| %>
-  <div class="medium-6 columns">
+  <div class="medium-4 columns">
     <div class="card">
-      <div class="image">
-        <%= link_to image_tag(post.image.url), post.image.url %>
-        <span class="title"></span>
-      </div>
       <div class="content">
         <p><%= post.title %></p>
       </div>
       <div class="action">
-        <p><span>What:</span><br><%= post.title %></p>
-        <p><span>Post Type:</span><br><%= post.post_type %></p>
-        <p><span>Money:</span><br><%= post.price %></p>
-        <p><span>Date:</span><br><%= post.created_at.to_s(:short) %></p>
+        <div class="small-6 columns">
+        <p><i class="fa fa-user"></i> <%= post.user.first_name %></p>
+        <p><i class="fa fa-info"></i> <%= post.post_type %></p>
+        </div>
+        <div class="small-6 columns">
+        <p><i class="fa fa-usd"></i> <%= post.price %></p>
+        <p><i class="fa fa-calendar-o"></i> <%= post.created_at.to_s(:short) %>
+        </p>
+        </div>
+        <div class="image">
+          <%= link_to image_tag(post.image.url), post.image.url %>
+          <span class="title"></span>
+        </div>
         <%= link_to "Show Detail", post_path(post) %>
       </div>
     </div>
   </div>
-  <% end %>
+<% end %>
 </div>
+
 
