@@ -9,6 +9,8 @@ class PostsController < ApplicationController
   end
 
   def index
+    @post = Post.all
+    @users = User.all
     @posts = Post.near([current_user.latitude, current_user.longitude], 0.5)
   end
 
@@ -27,7 +29,7 @@ class PostsController < ApplicationController
     @post.latitude = current_user.latitude
     if @post.save
         flash[:success] = "Your post has been listed!"
-        redirect_to posts_path
+        redirect_to users_path
     else
         render "new"
     end
