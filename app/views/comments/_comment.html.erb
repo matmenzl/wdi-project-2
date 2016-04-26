@@ -1,6 +1,7 @@
 
-<div class="row">
- <div class="large-2 columns small-2 userimage"><%= image_tag comment.user.user_image.thumb.url %></div>
+<div class="row comments">
+ <div class="large-2 columns small-2 userimage"><%= image_tag comment.user.user_image.thumb.url %>
+ </div>
  <div class="large-10 columns">
  <p><strong><%= comment.created_at.to_s(:short) %></strong></p>
  <p><strong><%= link_to comment.user.try(:first_name), comment.user %>: </strong><%= comment.comment %></p>

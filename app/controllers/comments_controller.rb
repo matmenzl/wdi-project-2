@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
       if @comment.save
         format.html { redirect_to @commentable, notice: "Thanks for commenting." }
       else
-        format.html { redirect_to @commentable, notice: "Comment wasn't successfully created." }
+        format.html { redirect_to @commentable, notice: "Comment wasn't  created." }
       end
     end
   end

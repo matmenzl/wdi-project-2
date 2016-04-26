@@ -1,8 +1,12 @@
-<div class="row">
-<div class="small-9 columns">
+
+
+
+
+<div class="large-3 columns ">
+  <div class="panel">
    <article class="article-card">
      <div class="card-content">
-       <%= link_to image_tag(@user.user_image.thumb.url), @user.user_image.url, class: 'post-icon' %>
+       <%= link_to image_tag(@user.user_image.thumb.url), @user.user_image.url, class: 'userimage' %>
        <p class="post-author">
          <%= @user.email %>
          <%= @user.first_name %>
@@ -21,24 +25,43 @@
          <%= link_to "Edit Account", edit_user_registration_path %>  
        </div>
      </p>
-     <p>
-      <h4>Posts from <%= @user.first_name %><%@user.last_name%></h1>
-        <% @user.posts.each do |post| %></h4>
-        <p>
-          <div>
-            <%= link_to image_tag(post.image.url), post.image.url %>    
-          </div>
-          <h4><span>What:</span><br><%= post.title %></h4>
-          <h5><span>Post Type:</span><br><%= post.post_type %></h5>
-          <h5><span>Money:</span><br><%= post.price %></h5>
-          <h5><span>Date:</span><br><%= post.created_at %></h5>
-          <%= link_to "Show Detail", post_path(post) %>
-          <% end %>
-        </p>
-      </p>
     </div>
-  </article>
-</div>
+    </article>
+    </div>
+    </div>
+     
+    <div class="row">
+    <% @user.posts.each do |post| %>
+      <div class="medium-4 columns">
+        <div class="card">
+          <div class="content">
+            <p><%= post.title %></p>
+          </div>
+          <div class="action">
+            <div class="small-6 columns">
+            <p><i class="fa fa-user"></i> <%= post.user.first_name %></p>
+            <p><i class="fa fa-info"></i> <%= post.post_type %></p>
+            </div>
+            <div class="small-6 columns">
+            <p><i class="fa fa-usd"></i> <%= post.price %></p>
+            <p><i class="fa fa-calendar-o"></i> <%= post.created_at.to_s(:short) %>
+            </p>
+            </div>
+            <div class="image">
+              <%= link_to image_tag(post.image.url), post.image.url %>
+              <span class="title"></span>
+            </div>
+            <%= link_to "Show Detail", post_path(post) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+
+
+
+
+
 
 
 

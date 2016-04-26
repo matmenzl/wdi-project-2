@@ -10,7 +10,7 @@
            <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
            <section class="section">
            <h5 class="title"><i class="fa fa-user"></i> <%= link_to @post.user.try(:first_name), @post.user %></h5>
-           <h5 class="title"><i class="fa fa-paper-plane"></i> <%= mail_to @post.user.email %></h5>
+           <h5 class="title"><i class="fa fa-paper-plane"></i> <%= mail_to @post.user.email, "Email" %></h5>
           </section>
            <section class="section">
              <h5 class="title"><i class="fa fa-info"></i> <%= @post.post_type %></h5>
