@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   def index
     @q = User.search(params[:q])
     @users = @q.result(distinct: true)
+    @users = User.near([current_user.latitude, current_user.longitude], 0.5)
   end
 
   def new

@@ -6,6 +6,11 @@
   <%= f.file_field :user_image %>
 </div>
 
+<div class="large-12 columns">
+  <%= f.label :remote_user_image_url %><br />
+  <%= f.text_field :remote_user_image_url, placeholder: "Remote URL" %>
+</div>
+
 <div class="field">
   <%= f.label :first_name %><br />
   <%= f.text_field :first_name, autocomplete: "off" %>
