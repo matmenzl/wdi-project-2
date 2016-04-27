@@ -14,10 +14,9 @@
     <%= f.text_field :title, placeholder: "Describe what you have to offer or look for" %>
   </div>
   <div class="field">
-    <%= f.label :image %>
 <!--     <%#= f.file_field :image, class: "file-upload" %>
- -->    <button class="file-upload">
-       <%  f.file_field :image, class: "file-input", text: "Upload" %>
+ -->    <button class="file-upload-post">
+       <%  f.file_field :image, class: "file-input" %>
     </button>
     <%= f.text_field :remote_image_url, placeholder: "Remote Image URL" %>
   </div>

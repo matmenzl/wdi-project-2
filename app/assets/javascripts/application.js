@@ -20,6 +20,11 @@
 $(function(){ 
   $(document).foundation(); 
 
-  $(".hoodchecker").html('<i class="fa fa-map-marker"</i>')
+  $(".hoodchecker").html('<i class="fa fa-map-marker"</i> <span>Your Neighbourhood</span>')
+
+  $(".file-upload").html('Upload User Image')
+  $(".file-upload-post").html('Upload Post Image')
+
+
 
 });

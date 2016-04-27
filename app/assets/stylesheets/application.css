@@ -41,7 +41,7 @@ width: 214px;
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 
 body {
-  background: #4CAF50; 
+  background: #66BB6A; 
 }
 
 .card {
@@ -116,8 +116,13 @@ video {
   font-size:50px;
 }
 
-input[type="text"], select {
-  border: solid 1px black;
+input[type="text"], input[type="email"], input[type="password"], select, input[type="field"], input[type="number"] {
+  border: solid 1px white;
+  background-color:#66BB6A;
+}
+
+#post_post_type {
+  color:white;
 }
 
 .videocontainer {
@@ -137,6 +142,29 @@ div.panel {
   text-align:center;
 }
 
+.hoodchecker span {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: bold;
+}
+
+*::-webkit-input-placeholder {
+    color: white;
+}
+*::-webkit-input-number-placeholder {
+    color: white;
+}
+
+:focus::-webkit-input-placeholder{
+  color:black;
+}
+
+.alert.alert-danger {
+  color:white;
+  background:#f44336;
+  padding:5px;
+  border-radius: 3px;
+}
 
 
 
