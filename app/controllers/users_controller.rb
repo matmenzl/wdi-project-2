@@ -30,6 +30,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
     @user = current_user
   end
 
@@ -44,7 +45,6 @@ class UsersController < ApplicationController
 
   def destroy
   end
-
 
   def user_params
     params.require(:user).permit(:username, :first_name, :last_name, :street, :city, :zip, :user_image, :remote_user_image_url, :longitude, :latitude)

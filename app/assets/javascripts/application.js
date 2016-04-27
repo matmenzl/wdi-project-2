@@ -20,6 +20,6 @@
 $(function(){ 
   $(document).foundation(); 
 
-
+  $(".hoodchecker").html('<i class="fa fa-map-marker"</i>')
 
 });

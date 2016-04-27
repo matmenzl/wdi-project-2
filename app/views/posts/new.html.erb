@@ -1,4 +1,6 @@
 <div class="row">
+  <div class="small-9 small-centered medium-6 medium-centered large-6 large-centered columns">
+<div class="row">
 <%= form_for @post do |f| %>
   <% if @post.errors.any? %>
     <% for message in @post.errors.full_messages %>
@@ -7,28 +9,28 @@
       </div>
     <% end %>
   <% end %>
-
+  <br>
   <div class="field">
-    <%= f.label :description %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, placeholder: "Describe what you have to offer or look for" %>
   </div>
   <div class="field">
     <%= f.label :image %>
-    <%= f.file_field :image, class: "file-upload" %>
-    <%= f.text_field :remote_image_url, placeholder: "Image URL" %>
+<!--     <%#= f.file_field :image, class: "file-upload" %>
+ -->    <button class="file-upload">
+       <%  f.file_field :image, class: "file-input", text: "Upload" %>
+    </button>
+    <%= f.text_field :remote_image_url, placeholder: "Remote Image URL" %>
   </div>
-
   <div class="field">
-    <%= f.label :post_type %>
     <%= f.select :post_type, ['I look for', 'I offer'] %>
   </div>
-
   <div class="field">
-    <%= f.label :Money %>
-    <%= f.number_field :price, step: 0.50 %>
+    <%= f.number_field :price, step: 0.50, placeholder: "If money is involved set a price-tag, otherwise set to 0" %>
   </div>
 
  <%= f.submit "Add Post", class: "button radius" %>
 
 <% end %>
+</div>
+</div>
 </div>

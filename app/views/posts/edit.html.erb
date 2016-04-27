@@ -1,33 +1,36 @@
-<h1>Edit</h1>
-<%= form_for @post do |f| %>
-<div class="field">
-  <%= f.label :title %><br />
-  <%= f.text_field :title, autocomplete: "off" %>
-</div>
+<div class="row">
+  <div class="small-9 small-centered medium-6 medium-centered large-6 large-centered columns">
+    <%= form_for @post do |f| %>
+    <div class="field">
+      <%= f.label :title %><br />
+      <%= f.text_field :title, autocomplete: "off" %>
+    </div>
 
-<div class="field">
-  <%= f.label :user_image %><br />
-  <%= f.file_field :user_image %>
-</div>
+    <div class="field">
+      <%= f.label :user_image %><br />
+      <%= f.file_field :user_image %>
+    </div>
 
-<div class="field">
-  <%= f.label :remote_image_url %><br />
- <%= f.text_field :remote_image_url %>
-</div>
+    <div class="field">
+      <%= f.label :remote_image_url %><br />
+      <%= f.text_field :remote_image_url %>
+    </div>
 
-<div class="field">
-  <%= f.label :post_type %>
-  <%= f.select :post_type, ['I look_for', 'I offer'] %>
-</div>
+    <div class="field">
+      <%= f.label :post_type %>
+      <%= f.select :post_type, ['I look_for', 'I offer'] %>
+    </div>
 
-<div class="field">
-  <%= f.label :price %>
-  <%= f.number_field :price, step: 0.01 %>
-</div>
+    <div class="field">
+      <%= f.label :price %>
+      <%= f.number_field :price, step: 0.01 %>
+    </div>
 
-<div class="actions">
-  <%= f.submit "Save" %>
-</div>
-<% end %>
+    <div class="actions">
+      <%= f.submit "Save" %>
+    </div>
+    <% end %>
 
-<%= link_to "Profile", current_user %>
+    <%= link_to "Profile", current_user %>
+  </div>
+</div>

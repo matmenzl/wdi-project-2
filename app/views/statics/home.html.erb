@@ -1,24 +1,27 @@
 
+<div class="videocontainer">
   <section class="video">
     <%= video_tag "meet_your_street.mp4", muted: true, :controls => false, :autobuffer => true, :autoplay => true, :loop => true %>
 
-
-  <div class="medium-4 columns data-equalizer info"><i class="fa fa-users fa-3" aria-hidden="true"></i><br>Connect with your neighbours and get things done
-  </div>
-  <div class="medium-4 columns data-equalizer-watch info"><i class="fa fa-check" aria-hidden="true"></i><br>Only real neighbours are allowed
-  </div>
-  <div class="medium-4 columns data-equalizer-watch info"><i class="fa fa-lock fa-3" aria-hidden="true"></i><br>Your posts are only accessible by your neighbours
-  </div>
-</section>
+    <div class="row" id="video_overlay">
+      <div class="medium-4 columns data-equalizer info"><i class="fa fa-users fa-3" aria-hidden="true"></i><br>Connect with your neighbours and get things done
+      </div>
+      <div class="medium-4 columns data-equalizer-watch info"><i class="fa fa-check" aria-hidden="true"></i><br>Only real neighbours are allowed
+      </div>
+      <div class="medium-4 columns data-equalizer-watch info"><i class="fa fa-lock fa-3" aria-hidden="true"></i><br>Your posts are only accessible by your neighbours
+      </div>
+    </div>
+  </section>
+</div>
 
 <div class="row">
   <div class="medium-12 medium-centered columns data-equalizer-watch add">
     <%= link_to "Add Post", new_post_path, class: "fa fa-plus fa-3 button round"%>
   </div>
   <div class="medium-12 medium-centered columns data-equalizer-watch">
-  <%= search_form_for @q do |f| %>
-            <%= f.button :HoodChecker , class: "fa fa-map-marker button round" %>
-  <% end %>
+    <%= search_form_for @q do |f| %>
+    <%= f.button :HoodChecker , class: "fa fa-map-marker button round" %>
+    <% end %>
   </div>
 </div>
 
