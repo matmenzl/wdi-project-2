@@ -1,4 +1,5 @@
   <nav class="top-bar" data-topbar role="navigation">
+
     <ul class="title-area">
       <li class="name">
         <h1><a href="/">Meet Your Street</a></h1>
@@ -32,6 +33,13 @@
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "Posts", posts_path %></li>
       <li><%= link_to "Add Post", new_post_path %></li>
+      <li>  <%= search_form_for @q do |f| %>
+            <%= f.button :HoodChecker , class: "fa fa-map-marker button round" %>
+  <% end %></li>
+
       </ul>
     </section>
+
+
+    </div>
   </nav>

@@ -9,9 +9,12 @@ class PostsController < ApplicationController
   end
 
   def index
+    @q = User.search(params[:q])
+    @posts = @q.result(distinct: true)
     @post = Post.all
     @users = User.all
     @posts = Post.near([current_user.latitude, current_user.longitude], 0.5)
+
   end
 
   def new

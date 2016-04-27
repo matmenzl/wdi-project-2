@@ -18,7 +18,6 @@
 
  */
 
-
 .log-in-form {
   border: 1px solid #cacaca;
   padding: 1rem;
@@ -40,8 +39,10 @@ width: 214px;
 }
 
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
-html body {
-  background: #43A047; }
+
+body {
+  background: #4CAF50; 
+}
 
 .card {
   font-family: 'Roboto', sans-serif;
@@ -100,6 +101,22 @@ div.row.commentform {
 textarea#comment_comment {
   border:none;
 }
+
+video { 
+  width: 100%; 
+}
+
+#background { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -100; -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); background: url(polina.jpg) no-repeat; background-size: cover; }
+
+/*section { margin-top: 250px; height: 500px; width: 100%; }
+
+div.top { margin-top: 50%; }
+
+#arrow { position: absolute; bottom: 0; left: 40%; }
+
+.video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+
+.video-container { position: absolute; top: 0; left: 5px; right: 5px; width: 100%; height: 100%; }*/
 
 
 
