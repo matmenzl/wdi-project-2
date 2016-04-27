@@ -1,13 +1,14 @@
 <div class="row">
-<div class="medium-12 columns">
-<div class="card">
-<div class="image"><!-- 
-<h1>Your Neighbourhood <%= current_user.zip %> <%= current_user.city %></h1> -->
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=1200x100&sensor=false&zoom=12&scale=4&markers=#{current_user.latitude}%2C#{current_user.longitude}" %>
+  <div class="medium-12 columns">
+    <div class="card">
+      <div class="image"><!-- 
+        <h1>Your Neighbourhood <%= current_user.zip %> <%= current_user.city %></h1> -->
+        <%= image_tag "http://maps.google.com/maps/api/staticmap?size=1200x100&sensor=false&zoom=12&scale=4&markers=#{current_user.latitude}%2C#{current_user.longitude}" %>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
+
 <br>
 
 <div class="row">
@@ -31,7 +32,8 @@
           <%= link_to image_tag(post.image.url), post.image.url %>
           <span class="title"></span>
         </div>
-        <%= link_to "Show Detail", post_path(post) %>
+        <br>
+        <button class="button tiny round"><%= link_to "Show Detail", post_path(post) %></button>
       </div>
     </div>
   </div>

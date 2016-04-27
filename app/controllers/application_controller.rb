@@ -6,6 +6,11 @@ class ApplicationController < ActionController::Base
   before_filter :authenticate_user!, except: [:home, :signup, :register]
   before_action :set_search_parameters
 
+  helper_method :logged_in?
+  def logged_in?
+    !!current_user
+  end
+
 
   protected
   def after_sign_in_path_for(resource)

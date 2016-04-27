@@ -2,6 +2,19 @@
   <section class="video">
     <%= video_tag "meet_your_street.mp4", muted: true, :controls => false, :autobuffer => true, :autoplay => true, :loop => true %>
 
+    <% if logged_in? %>
+    <div class="medium-12 homeaction" equalizer-info>
+        <div class="medium-6 data" equalizer-watch>
+        <%= link_to "Add Post", new_post_path, class: "button round addpost" %>
+        </div>
+        <div class="medium-6 data" equalizer-watch>
+          <%= search_form_for @q do |f| %>
+          <%= f.button :HoodChecker , class: "hoodchecker button round" %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
     <div class="row" id="video_overlay">
       <div class="medium-4 columns data-equalizer info"><i class="fa fa-users fa-3" aria-hidden="true"></i><br>Connect with your neighbours and get things done
       </div>
@@ -13,16 +26,12 @@
   </section>
 </div>
 
-<div class="row">
-  <div class="medium-12 medium-centered columns data-equalizer-watch add">
-    <%= link_to "Add Post", new_post_path, class: "fa fa-plus fa-3 button round" %>
 
-  </div>
-  <div class="medium-12 medium-centered columns data-equalizer-watch">
-    <%= search_form_for @q do |f| %>
-    <%= f.button :HoodChecker , class: "hoodchecker button round" %>
-
-    <% end %>
   </div>
 </div>
+
+
+
+
+
 
