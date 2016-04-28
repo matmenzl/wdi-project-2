@@ -175,6 +175,7 @@ div.panel {
 
 button.hoodcheckerheader.button.round {
   height: 32px;
+  margin-left:5px;
 }
 
 .hoodcheckerheader span {
@@ -249,3 +250,11 @@ button a {
   color:white;
 }
 
+@media screen and (max-width: 640px) {
+  .videocontainer {
+    display:none;
+  }
+  #imagefallback {
+    display:inline-block;
+  }  
+}
