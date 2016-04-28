@@ -53,7 +53,7 @@
             <% if @user.email == current_user.email  %>
             <button class="button tiny"><%= link_to "Show", post_path(post) %></button>
             <button class="button tiny"><%= link_to "Edit", edit_post_path(post) %></button>
-            <button class="button tiny"><%= link_to "Delete", post_path(post) %>
+            <button class="button tiny"><%= link_to "Delete", post_path(post), method: :delete %>
             </button>
             <% end %>
             </ul>

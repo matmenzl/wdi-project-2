@@ -242,7 +242,7 @@ section.home {
 #arrow { 
   position: absolute; 
   bottom: 0; 
-  left: 40%; 
+  left: 35%; 
 }
 
 button a {
@@ -268,19 +268,10 @@ button a {
 }
 
 img.background {
-  position: absolute; 
-  top: 30%; 
-  left: 50%; 
-  min-width: 100%; 
-  min-height: 70%; 
   width: auto; 
-  height: 400px; 
-  z-index: -100; 
-  -webkit-transform: translateX(-50%) translateY(-50%); 
-  transform: translateX(-50%) translateY(-50%); 
-  background-size: cover; 
-  background:none;
-}
+  height: auto; 
+}  
+
 
 video.play { display: inline-block; }
 video.pause { display: none; }

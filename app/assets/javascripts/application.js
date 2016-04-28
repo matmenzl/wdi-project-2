@@ -38,7 +38,6 @@ $(function(){
 
   $('#arrow').addClass('animated infinite bounce');
 
-
   function checkWindow() {
     var video = $('video');
     if (window.innerWidth >= 640) {

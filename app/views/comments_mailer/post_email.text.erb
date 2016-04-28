@@ -1,7 +1,8 @@
 Hi <%= @user.first_name %>
 Your post "<%= @post.title %>" received a new comment. 
 
-Check it out <%= link_to post_path %>
+Check it out Meet Your Street (link) 
+<%= link_to @post.user.try(:first_name), @post.user %>
 
 best
 Meet Your Street

@@ -2,39 +2,13 @@
 <a class="anchor" href="#top"></a>
 <div class="videocontainer">
 <section class="video">
-  <video autoplay loop class="background">
-  <source src="assets/images/meet_your_street.mp4" type="video/mp4">
+  <video autoplay loop muted class="background">
+  <source src="assets/meet_your_street.mp4" type="video/mp4">
   </video>
   </section>
-  <img class="background" src="assets/images/meet_your_street.gif" title="Your browser does not support the video tag">
+  <img class="background" src="assets/meet_your_street.gif" title="Your browser does not support the video tag">
 </div>
 
-<!-- <video autoplay loop id="background">
-    <source src="assets/meet_your_street.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-    <img src="assets/meet_your_street.gif" title="Your browser does not support the <video> tag">
-</video> -->
-
-
-
-<!--   <section class="video">
-    <%#= video_tag "meet_your_street.mp4", muted: true, :controls => false, :autoplay => true, loop: true %>
-    </section> -->
-
-
-
-<!--     <% if logged_in? %>
-    <div class="medium-12 columns homeaction" equalizer-info>
-        <div class="medium-6 columns" equalizer-watch>
-        <%= link_to "Add Post", new_post_path, class: "button round addpost" %>
-        </div>
-        <div class="medium-6 columns" equalizer-watch>
-          <%= search_form_for @q do |f| %>
-          <%= f.button :HoodChecker , class: "hoodchecker button round" %>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
- -->
  </div>
   <a class="anchor" href="#middle">
   <div class="arrow-down-light-blue top"><img id="arrow" src="assets/arrow_white_info.png"></div>
@@ -42,16 +16,12 @@
   <section class="home" id="middle">
     <div class="row">
     <div class="medium-12 columns">
-
-
       <div class="large-4 columns info"><i class="fa fa-check" aria-hidden="true"></i><br>Meet Your Street is your safe Social Network. Only real neighbours no fake profiles!
       </div>
-
       <div class="large-4 columns info"><i class="fa fa-users fa-3" aria-hidden="true"></i><br>
       <p>Connect with your neighbours and get things done within your neighbourhood</p><br>
       <%= link_to "Add Post", new_post_path, class: "button round addpost" %>
-      </div>
-      
+      </div>      
       <div class="large-4 columns info"><i class="fa fa-lock fa-3" aria-hidden="true"></i><br>
       <p>Your posts are only accessible by your neighbours. Nothing will be posted on Facebook or Google</p>
       <br>
@@ -62,7 +32,6 @@
       </div>
     </div>
   </section>
-
   </div>
 </div>
 

@@ -6,9 +6,11 @@
 <body>
   Hi <%= @user.first_name %>
 
-  Your post "<%= @post.title %>" received a comment. Check it out:
+  Your post "<%= @post.title %>" received a comment. 
 
-  <%= link_to post_path %>
+
+  Check it out on meet your street. 
+  <%= link_to @post.user.try(:first_name), @post.user %>
 
 </body>
 </html>

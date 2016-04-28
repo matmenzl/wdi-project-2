@@ -14,7 +14,6 @@ class PostsController < ApplicationController
     @post = Post.all
     @users = User.all
     @posts = Post.near([current_user.latitude, current_user.longitude], 0.5)
-
   end
 
   def new
@@ -32,7 +31,7 @@ class PostsController < ApplicationController
     @post.latitude = current_user.latitude
     if @post.save
         flash[:success] = "Your post has been listed!"
-        redirect_to users_path
+        redirect_to root_path
     else
         render "new"
     end
@@ -45,7 +44,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to post_path
+      redirect_to user_path
     else 
       render 'edit'
     end
@@ -54,8 +53,8 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     if @post.destroy
-      redirect_to posts_path
       flash[:success] = "Your post has been deleted!"
+      redirect_to root_path
     else
       render @post
       flash[:warning] = "Your post has not been deleted!"
@@ -67,3 +66,4 @@ end
         params.require(:post).permit(:title, :post_type, :image, :price, :remote_image_url, :longitude, :latitude, :distance)
     end
 end
+

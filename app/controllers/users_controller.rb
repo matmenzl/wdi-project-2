@@ -12,11 +12,6 @@ class UsersController < ApplicationController
     @user == current_user
   end
 
-
-  # def index
-  #   @users = User.all
-  # end
-
   def index
     @q = User.search(params[:q])
     @users = @q.result(distinct: true)
