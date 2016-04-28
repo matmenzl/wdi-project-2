@@ -217,6 +217,10 @@ font-weight: bold;
   font-weight: bold;
 }
 
+nav.top-bar {
+  margin-bottom: 10px;
+}
+
 .top-bar input, .top-bar select, .top-bar .button, .top-bar button{
   top: 0.4rem;
 }
@@ -239,5 +243,9 @@ section.home {
   position: absolute; 
   bottom: 0; 
   left: 40%; 
+}
+
+button a {
+  color:white;
 }
 

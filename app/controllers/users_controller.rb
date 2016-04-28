@@ -8,6 +8,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def correct_user
+    @user == current_user
+  end
+
+
   # def index
   #   @users = User.all
   # end

@@ -34,12 +34,15 @@
   <section class="home" id="middle">
     <div class="row">
     <div class="medium-12 columns">
-      <div class="large-4 columns info"><i class="fa fa-users fa-3" aria-hidden="true"></i><br>Connect with your neighbours and get things done<br>
+      <div class="large-4 columns info"><i class="fa fa-users fa-3" aria-hidden="true"></i><br>
+      <p>Connect with your neighbours and get things done within your neighbourhood</p><br>
       <%= link_to "Add Post", new_post_path, class: "button round addpost" %>
       </div>
-      <div class="large-4 columns info"><i class="fa fa-check" aria-hidden="true"></i><br>Only real neighbours no fake profiles are on Meet Your Street
+      <div class="large-4 columns info"><i class="fa fa-check" aria-hidden="true"></i><br>Meet Your Street is your safe Social Network. Only real neighbours no fake profiles!
       </div>
-      <div class="large-4 columns info"><i class="fa fa-lock fa-3" aria-hidden="true"></i><br>Your posts are only accessible by your neighbours<br>
+      <div class="large-4 columns info"><i class="fa fa-lock fa-3" aria-hidden="true"></i><br>
+      <p>Your posts are only accessible by your neighbours. Nothing will be posted on Facebook or Google</p>
+      <br>
       <%= search_form_for @q do |f| %>
       <%= f.button :HoodChecker , class: "hoodchecker button round" %>
       <% end %>

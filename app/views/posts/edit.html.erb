@@ -1,18 +1,17 @@
-<div class="row">
-  <div class="small-9 small-centered medium-6 medium-centered large-6 large-centered columns">
+<div class="large-6 columns large-centered ">
     <%= form_for @post do |f| %>
     <div class="field">
-      <%= f.label :title %><br />
+      <%= f.label :title %>
       <%= f.text_field :title, autocomplete: "off" %>
     </div>
 
     <div class="field">
-      <%= f.label :user_image %><br />
+      <%= f.label :user_image %>
       <%= f.file_field :user_image %>
     </div>
 
     <div class="field">
-      <%= f.label :remote_image_url %><br />
+      <%= f.label :remote_image_url %>
       <%= f.text_field :remote_image_url %>
     </div>
 
@@ -27,10 +26,9 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Save" %>
+      <%= f.submit "Save", class: "button tiny" %>
     </div>
     <% end %>
 
     <%= link_to "Profile", current_user %>
-  </div>
 </div>

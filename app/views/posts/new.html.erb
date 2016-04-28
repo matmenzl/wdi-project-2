@@ -1,35 +1,35 @@
 <div class="row">
   <div class="small-9 small-centered medium-6 medium-centered large-6 large-centered columns">
-<div class="row">
-<%= form_for @post do |f| %>
-  <% if @post.errors.any? %>
-    <% for message in @post.errors.full_messages %>
+    <div class="row">
+      <%= form_for @post do |f| %>
+      <% if @post.errors.any? %>
+      <% for message in @post.errors.full_messages %>
       <div class="alert alert-danger" role="alert">
         <%= message %>
       </div>
-    <% end %>
-  <% end %>
-  <br>
-  <div class="field">
-    <%= f.text_field :title, placeholder: "Describe what you have to offer or look for" %>
-  </div>
-  <div class="field">
-     <%= f.file_field :image, class: "file-upload" %>
-    <button class="file-upload-post">
+      <% end %>
+      <% end %>
+      <br>
+      <div class="field">
+        <%= f.text_field :title, placeholder: "Describe what you have to offer or look for" %>
+      </div>
+      <div class="field">
        <%= f.file_field :image, class: "file-upload" %>
-    </button>
-    <%= f.text_field :remote_image_url, placeholder: "Remote Image URL" %>
-  </div>
-  <div class="field">
-    <%= f.select :post_type, ['I look for', 'I offer'] %>
-  </div>
-  <div class="field">
-    <%= f.number_field :price, step: 0.50, placeholder: "If money is involved set a price-tag, otherwise set to 0" %>
-  </div>
+       <button class="file-upload-post">
+         <%= f.file_field :image, class: "file-upload" %>
+       </button>
+       <%= f.text_field :remote_image_url, placeholder: "Remote Image URL" %>
+     </div>
+     <div class="field">
+      <%= f.select :post_type, ['I look for', 'I offer'] %>
+    </div>
+    <div class="field">
+      <%= f.number_field :price, step: 0.50, placeholder: "If money is involved set a price-tag, otherwise set to 0" %>
+    </div>
 
- <%= f.submit "Add Post", class: "button radius" %>
+    <%= f.submit "Add Post", class: "button tiny" %>
 
-<% end %>
-</div>
+    <% end %>
+  </div>
 </div>
 </div>

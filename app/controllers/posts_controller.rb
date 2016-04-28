@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
-  before_filter only: :edit
+  before_filter :require_permission, only: :edit
 
-  # def require_permission
-  #   if current_user != Post.find(params[:id]).user 
-  #     flash[:warning] = "Naughty you! You cannot edit posts of other users."
-  #     redirect_to root_path
-  #   end
-  # end
+  def require_permission
+    if current_user != Post.find(params[:id]).user 
+      flash[:warning] = "Naughty you! You cannot edit posts of other users."
+      redirect_to root_path
+    end
+  end
 
   def index
     @q = User.search(params[:q])
