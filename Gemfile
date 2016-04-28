@@ -21,6 +21,7 @@ gem 'acts_as_commentable', '4.0.2'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'masonry-rails'
 gem 'geocoder'
+gem 'animate.css-rails', '~> 3.2.0'
 
 
 group :development, :test do

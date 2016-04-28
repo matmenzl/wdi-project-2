@@ -13,6 +13,7 @@
  *= require foundation_and_overrides
  *= require 'masonry/infinitescroll'
  *= require 'masonry/transitions'
+ *= require 'animate'
  *= require_tree .
  *= require_self
 
