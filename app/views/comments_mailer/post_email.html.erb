@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Comment on Meet Your Street</title>
+</head>
+<body>
+  Hi <%= @user.first_name %>
+
+  Your post "<%= @post.title %>" received a comment. Check it out:
+
+  <%= link_to post_path %>
+
+</body>
+</html>

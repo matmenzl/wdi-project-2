@@ -107,11 +107,9 @@ div.row.commentform {
   background-color:#66BB6A;
 }
 
-video { 
-  width: 100%; 
-}
 
-#background { 
+
+video { 
   position: absolute; 
   top: 50%; 
   left: 50%; 
@@ -125,7 +123,8 @@ video {
   background-size: cover; 
   background:none;
 }
-html, body#background {
+
+html, body.background {
   background:none;
 }
 
@@ -251,10 +250,37 @@ button a {
 }
 
 @media screen and (max-width: 640px) {
-  .videocontainer {
+  video.background {
     display:none;
   }
-  #imagefallback {
-    display:inline-block;
+  img.background {
+    display:block;
   }  
 }
+
+@media screen and (min-width: 641px) {
+  video.background {
+    display:block;
+  }
+  img.background {
+    display:none;
+  }  
+}
+
+img.background {
+  position: absolute; 
+  top: 30%; 
+  left: 50%; 
+  min-width: 100%; 
+  min-height: 70%; 
+  width: auto; 
+  height: 400px; 
+  z-index: -100; 
+  -webkit-transform: translateX(-50%) translateY(-50%); 
+  transform: translateX(-50%) translateY(-50%); 
+  background-size: cover; 
+  background:none;
+}
+
+video.play { display: inline-block; }
+video.pause { display: none; }

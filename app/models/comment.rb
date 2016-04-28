@@ -12,4 +12,10 @@ class Comment < ActiveRecord::Base
 
   # NOTE: Comments belong to a user
   belongs_to :user
+
+  after_create :send_email
+
+  def send_email
+    CommentsMailer.post_email(commentable.user, commentable).deliver
+  end
 end

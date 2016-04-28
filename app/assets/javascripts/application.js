@@ -38,4 +38,22 @@ $(function(){
 
   $('#arrow').addClass('animated infinite bounce');
 
+
+  function checkWindow() {
+    var video = $('video');
+    if (window.innerWidth >= 640) {
+      video.attr('class', 'play');
+      video.currentTime = 0;
+      video[0].play();
+      return "play";
+    } else if (window.innerWidth < 640) {
+      video.attr('class', 'pause');
+      video[0].pause();
+      return "pause";
+    };
+  }
+  
+  $(window).resize(checkWindow);
+  checkWindow();
+
 });
