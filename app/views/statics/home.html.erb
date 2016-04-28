@@ -1,31 +1,52 @@
+<!DOCTYPE html>
+<a class="anchor" href="#top"></a>
 <div class="videocontainer">
-  <section class="video">
-    <%= video_tag "meet_your_street.mp4", muted: true, :controls => false, :autobuffer => true, :autoplay => true, :loop => true %>
+<section class="video">
+  <video autoplay loop, id="background">
+  <source src="assets/meet_your_street.mp4" type="video/mp4">
+  </video>
+  </section>
+</div>
 
-    <% if logged_in? %>
-    <div class="medium-12 homeaction" equalizer-info>
-        <div class="medium-6 data" equalizer-watch>
+<!--   <section class="video">
+    <%#= video_tag "meet_your_street.mp4", muted: true, :controls => false, :autoplay => true, loop: true %>
+    </section> -->
+
+
+
+<!--     <% if logged_in? %>
+    <div class="medium-12 columns homeaction" equalizer-info>
+        <div class="medium-6 columns" equalizer-watch>
         <%= link_to "Add Post", new_post_path, class: "button round addpost" %>
         </div>
-        <div class="medium-6 data" equalizer-watch>
+        <div class="medium-6 columns" equalizer-watch>
           <%= search_form_for @q do |f| %>
           <%= f.button :HoodChecker , class: "hoodchecker button round" %>
           <% end %>
         </div>
       </div>
     <% end %>
-
-    <div class="row" id="video_overlay">
-      <div class="medium-4 columns data-equalizer info"><i class="fa fa-users fa-3" aria-hidden="true"></i><br>Connect with your neighbours and get things done
+ -->
+ </div>
+  <a class="anchor" href="#middle">
+  <div class="arrow-down-light-blue top"><img id="arrow" src="assets/arrow_white_info.png"></div>
+  </a>
+  <section class="home" id="middle">
+    <div class="row">
+    <div class="medium-12 columns">
+      <div class="large-4 columns info"><i class="fa fa-users fa-3" aria-hidden="true"></i><br>Connect with your neighbours and get things done<br>
+      <%= link_to "Add Post", new_post_path, class: "button round addpost" %>
       </div>
-      <div class="medium-4 columns data-equalizer-watch info"><i class="fa fa-check" aria-hidden="true"></i><br>Only real neighbours are allowed
+      <div class="large-4 columns info"><i class="fa fa-check" aria-hidden="true"></i><br>Only real neighbours no fake profiles are on Meet Your Street
       </div>
-      <div class="medium-4 columns data-equalizer-watch info"><i class="fa fa-lock fa-3" aria-hidden="true"></i><br>Your posts are only accessible by your neighbours
+      <div class="large-4 columns info"><i class="fa fa-lock fa-3" aria-hidden="true"></i><br>Your posts are only accessible by your neighbours<br>
+      <%= search_form_for @q do |f| %>
+      <%= f.button :HoodChecker , class: "hoodchecker button round" %>
+      <% end %>
+      </div>
       </div>
     </div>
   </section>
-</div>
-
 
   </div>
 </div>

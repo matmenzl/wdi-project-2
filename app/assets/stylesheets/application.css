@@ -40,9 +40,8 @@ width: 214px;
 
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 
-body {
+html, body {
   background: #66BB6A; 
-  height: auto;
 }
 
 .card {
@@ -103,14 +102,35 @@ textarea#comment_comment {
   border:none;
 }
 
+div.row.commentform {
+  background-color:#66BB6A;
+}
+
 video { 
   width: 100%; 
 }
 
-#background { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -100; -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); background: url(polina.jpg) no-repeat; background-size: cover; }
+#background { 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto; 
+  height: auto; 
+  z-index: -100; 
+  -webkit-transform: translateX(-50%) translateY(-50%); 
+  transform: translateX(-50%) translateY(-50%); 
+  background-size: cover; 
+  background:none;
+}
+html, body#background {
+  background:none;
+}
 
 .fa.fa-map-marker {
   font-size: 20px;
+  margin:-12px;
 }
 
 .fa.fa-users, .fa.fa-check, .fa.fa-lock {
@@ -127,8 +147,8 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 }
 
 .videocontainer {
-  position:relative;
-}
+/*  position:relative;
+*/}
 
 #video_overlay {
   position: absolute;
@@ -141,7 +161,7 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 
 div.homeaction {
   position: absolute;
-  top: 50%;
+  top: 80%;
   text-align: center;
   right: 50%;
   left: 50%;
@@ -150,6 +170,16 @@ div.homeaction {
 
 div.panel {
   text-align:center;
+}
+
+button.hoodcheckerheader.button.round {
+  height: 32px;
+}
+
+.hoodcheckerheader span {
+font-family: 'Roboto';
+font-size: 18px;
+font-weight: bold;
 }
 
 .hoodchecker span {
@@ -186,4 +216,27 @@ div.panel {
   font-weight: bold;
 }
 
+.top-bar input, .top-bar select, .top-bar .button, .top-bar button{
+  top: 0.4rem;
+}
+
+div.info {
+  background-color: #66BB6A;
+}
+
+.row.spacer {
+  margin-bottom: 20px;
+}
+
+section.home { 
+  margin-top: 700px; 
+  height: 500px; 
+  width: 100%; 
+}
+
+#arrow { 
+  position: absolute; 
+  bottom: 0; 
+  left: 40%; 
+}
 

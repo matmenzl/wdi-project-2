@@ -11,10 +11,13 @@
 
 <br>
 
-<div class="row">
-<% @posts.each do |post| %>
+
+
+<% @posts.in_groups_of(3) do |group| %>
+<div class="row spacer" data-equalizer>
+<% group.compact.each do |post| %>
   <div class="medium-4 columns">
-    <div class="card">
+    <div class="card" data-equalizer-watch>
       <div class="content">
         <p><%= post.title %></p>
       </div>
@@ -39,5 +42,5 @@
   </div>
 <% end %>
 </div>
-
+<% end %>
 

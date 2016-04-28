@@ -21,11 +21,21 @@ $(function(){
   $(document).foundation(); 
 
   $(".hoodchecker").html('<i class="fa fa-map-marker"</i> <span>Your Neighbourhood</span>')
+  $(".hoodcheckerheader").html('<i class="fa fa-map-marker"</i> <span>Meet Your Street</span>')
+
   $(".addpost").html('<i class="fa fa-plus"</i> <span>Add Post</span>')
 
   $(".file-upload").html('Upload User Image')
   $(".file-upload-post").html('Upload Post Image')
 
+  $(".videocontainer").prop('muted', true); //mute
 
+   $(".anchor").click(function(e){
+      $('html, body').animate({
+       scrollTop: $($(this).attr('href')).offset().top
+      }, 1000);
+   });
+
+  $('#arrow').addClass('animated infinite bounce');
 
 });

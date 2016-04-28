@@ -1,9 +1,14 @@
   <nav class="top-bar" data-topbar role="navigation">
 
     <ul class="title-area">
-      <li class="name">
-        <h1><a href="/">Meet Your Street</a></h1>
-      </li>
+      <!--  <li class="name">
+       <h1><a href="/">Meet Your Street</a></h1>  
+    </li> --> 
+      <li class="name"><%= search_form_for @q do |f| %>
+           <%= f.button :HoodChecker , class: "hoodcheckerheader button round" %>
+        <% end %>
+      </li>   
+       
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
@@ -33,10 +38,6 @@
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "Posts", posts_path %></li>
       <li><%= link_to "Add Post", new_post_path %></li>
-      <li>  <%= search_form_for @q do |f| %>
-            <%= f.button :HoodChecker , class: "hoodchecker button round" %>
-  <% end %></li>
-
       </ul>
     </section>
 

@@ -1,45 +1,48 @@
-<h1>Edit</h1>
-<%= form_for @user do |f| %>
+<div class="large-6 columns large-centered ">
+  <div class="panel">
+   <article class="article-card">
+     <div class="card-content"><%= form_for @user do |f| %>
 
+
+<div class="large-12 columns">
 <div class="field">
 <%= link_to image_tag(@user.user_image.thumb.url), @user.user_image.url, class: 'userimage' %>
-  <%= f.label :user_image %><br />
   <%= f.file_field :user_image %>
+</div>
 </div>
 
 <div class="large-12 columns">
-  <%= f.label :remote_user_image_url %><br />
   <%= f.text_field :remote_user_image_url, placeholder: "Remote URL" %>
 </div>
 
 <div class="field">
-  <%= f.label :first_name %><br />
   <%= f.text_field :first_name, autocomplete: "off" %>
 </div>
 
 <div class="field">
-  <%= f.label :last_name %><br />
   <%= f.text_field :last_name, autocomplete: "off" %>
 </div>
 
 <div class="field">
-  <%= f.label :street %><br />
   <%= f.text_field :street, autocomplete: "off" %>
 </div>
 
 <div class="field">
-  <%= f.label :city %><br />
   <%= f.text_field :city, autocomplete: "off" %>
 </div>
 
 <div class="field">
-  <%= f.label :zip %><br />
   <%= f.text_field :zip, autocomplete: "off" %>
 </div>
 <div class="actions">
-  <%= f.submit "Save" %>
+  <%= f.submit "Save", class: "button round" %>
 </div>
 
 <% end %>
 
 <%= link_to "Profile", current_user %>
+
+</div>
+</article>
+</div>
+</div>
