@@ -31,7 +31,7 @@ class PostsController < ApplicationController
     @post.latitude = current_user.latitude
     if @post.save
         flash[:success] = "Your post has been listed!"
-        redirect_to root_path
+        redirect_to @post
     else
         render "new"
     end
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to user_path
+      redirect_to current_user
     else 
       render 'edit'
     end

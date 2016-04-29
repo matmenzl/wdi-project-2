@@ -6,8 +6,8 @@
     </div>
 
     <div class="field">
-      <%= f.label :user_image %>
-      <%= f.file_field :user_image %>
+      <%= f.label :image %>
+      <%= f.file_field :image %>
     </div>
 
     <div class="field">
@@ -26,9 +26,8 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Save", class: "button tiny" %>
+      <%= f.submit "Edit", class: "button tiny" %>
     </div>
     <% end %>
 
-    <%= link_to "Profile", current_user %>
 </div>

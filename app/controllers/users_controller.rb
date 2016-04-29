@@ -3,14 +3,14 @@ class UsersController < ApplicationController
 
   def require_permission
     if current_user != User.find(params[:id]) 
-      flash[:warning] = "Naughty you! You cannot edit profiles of other users."
+      flash[:warning] = "You cannot edit profiles of other users."
       redirect_to root_path
     end
   end
 
-  def correct_user
-    @user == current_user
-  end
+  # def correct_user
+  #   @user == current_user
+  # end
 
   def index
     @q = User.search(params[:q])
@@ -19,11 +19,7 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:id])
-  end
-
-  def show
-    @user = User.find(params[:id])
+    @user = User.new
   end
 
   def create
@@ -37,10 +33,14 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update(user_params)
-      redirect_to @user
+      redirect_to user_path
     else 
       render 'edit'
     end
+  end
+ 
+  def show
+    @user = User.find(params[:id])
   end
 
   def destroy
