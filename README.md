@@ -52,7 +52,7 @@
 
 + 'Meet Your Street' by Mathias Menzl 
 + 'Meet Your Street' wouldn't have been possible without the vast coding knowledge of GA Teachers Alex, Caroline and Oli
-+ Video Snippets courtesy of Vimeo-Users
++ Video Snippets courtesy of Vimeo-Users https://vimeo.com/parkslope
 + Any ressources used were either created by hand or are free of right and duly credited
 
 Feel free to comment and fork.
