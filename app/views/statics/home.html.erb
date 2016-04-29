@@ -3,10 +3,10 @@
 <div class="videocontainer">
 <section class="video">
   <video autoplay loop muted class="background">
-  <source src="assets/meet_your_street.mp4" type="video/mp4">
+  <source src="assets/meet_your_street_small_low.mp4" type="video/mp4">
   </video>
   </section>
-  <img class="background" src="assets/meet_your_street.gif" title="Your browser does not support the video tag">
+  <img class="background" src="assets/meet_your_street_3.gif" title="Your browser does not support the video tag">
 </div>
 
  </div>
@@ -14,15 +14,16 @@
   <div class="arrow-down-light-blue top"><img id="arrow" src="assets/arrow_white_info.png"></div>
   </a>
   <section class="home" id="middle">
-    <div class="row">
+    <div class="row" data-equalizer>
     <div class="medium-12 columns">
-      <div class="large-4 columns info"><i class="fa fa-check" aria-hidden="true"></i><br>Meet Your Street is your safe Social Network. Only real neighbours no fake profiles!
+      <div class="large-4 columns info" data-equalizer-watch><i class="fa fa-check" aria-hidden="true"></i><br>Meet Your <p>Street is your safe Social Network. Only real neighbours - no fake profiles!</p><br>
+      <%= link_to "How to", new_post_path, class: "button round howto" %>
       </div>
-      <div class="large-4 columns info"><i class="fa fa-users fa-3" aria-hidden="true"></i><br>
+      <div class="large-4 columns info" data-equalizer-watch><i class="fa fa-users fa-3" aria-hidden="true"></i><br>
       <p>Connect with your neighbours and get things done within your neighbourhood</p><br>
       <%= link_to "Add Post", new_post_path, class: "button round addpost" %>
       </div>      
-      <div class="large-4 columns info"><i class="fa fa-lock fa-3" aria-hidden="true"></i><br>
+      <div class="large-4 columns info" data-equalizer-watch><i class="fa fa-lock fa-3" aria-hidden="true"></i><br>
       <p>Your posts are only accessible by your neighbours. Nothing will be posted on Facebook or Google</p>
       <br>
       <%= search_form_for @q do |f| %>

@@ -24,6 +24,8 @@ $(function(){
   $(".hoodcheckerheader").html('<i class="fa fa-map-marker"</i> <span>Meet Your Street</span>')
 
   $(".addpost").html('<i class="fa fa-plus"</i> <span>Add Post</span>')
+  $(".howto").html('<i class="fa fa-question"</i> <span>How To</span>')
+
 
   $(".file-upload").html('Upload User Image')
   $(".file-upload-post").html('Upload Post Image')
