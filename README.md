@@ -1,5 +1,5 @@
 
-![alt text](assets/readme.png "Meet Your Street")
+![alt text](assets/images/readme.png "Meet Your Street")
 
 [Link to the Website:](https://floating-thicket-23337.herokuapp.com)
 
