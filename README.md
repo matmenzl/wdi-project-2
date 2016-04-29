@@ -44,10 +44,9 @@
 + Use-Cases and User-Stories with Google Docs
 + Project-Planning with Trello
 [file.pdf](assets/images/wdi-2-wireframes.pdf)
-![alt text](assets/erd.png "ERD")
-![alt text](assets/trello.png "Trello")
-![alt text](assets/googledocs.png "Google Docs")
-
+![ERD](https://github.com/matmenzl/wdi-project-2/blob/master/app/assets/images/erd.png?raw=true)
+![Trello](https://github.com/matmenzl/wdi-project-2/blob/master/app/assets/images/trello.png?raw=true)
+![Google Docs](https://github.com/matmenzl/wdi-project-2/blob/master/app/assets/images/googledocs.png?raw=true)
 
 ###Credits
 
