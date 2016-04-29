@@ -275,3 +275,5 @@ img.background {
 
 video.play { display: inline-block; }
 video.pause { display: none; }
+
+.row.comments {margin:5px;}

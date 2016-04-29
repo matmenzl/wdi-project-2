@@ -1,5 +1,5 @@
 class CommentsMailer < ApplicationMailer
-  default from: "no-reply@example.com"
+  default from: "no-reply@meetyourstreet.com"
 
   def post_email(user, commentable)
     @user = user
