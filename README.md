@@ -43,7 +43,7 @@
 + ERD-Diagram with Omnigraffle erd.png
 + Use-Cases and User-Stories with Google Docs
 + Project-Planning with Trello
-[file.pdf](assets/images/wdi-2-wireframes.pdf)
+[file.pdf](https://github.com/matmenzl/wdi-project-2/blob/master/app/assets/images/wdi-2-wireframes.pdf)
 ![ERD](https://github.com/matmenzl/wdi-project-2/blob/master/app/assets/images/erd.png?raw=true)
 ![Trello](https://github.com/matmenzl/wdi-project-2/blob/master/app/assets/images/trello.png?raw=true)
 ![Google Docs](https://github.com/matmenzl/wdi-project-2/blob/master/app/assets/images/googledocs.png?raw=true)
