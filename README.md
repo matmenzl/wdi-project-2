@@ -1,5 +1,5 @@
 
-![alt text](assets/images/readme.png "Meet Your Street")
+![Meet Your Street](https://github.com/matmenzl/wdi-project-2/blob/master/app/assets/images/readme.png?raw=true)
 
 [Link to the Website:](https://floating-thicket-23337.herokuapp.com)
 
