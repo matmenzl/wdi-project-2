@@ -40,10 +40,14 @@
 
 ### Project-Setup
 + Clickable Wireframes with Balsamiq
++ ERD-Diagram with Omnigraffle erd.png
 + Use-Cases and User-Stories with Google Docs
 + Project-Planning with Trello
+[file.pdf](images/wdi-2-wireframes.pdf)
+![alt text](images/erd.png "ERD")
 ![alt text](images/trello.png "Trello")
 ![alt text](images/googledocs.png "Google Docs")
+
 
 ###Credits
 
