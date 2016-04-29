@@ -1,5 +1,5 @@
 
-![alt text](images/readme.png "Meet Your Street")
+![alt text](assets/readme.png "Meet Your Street")
 
 [Link to the Website:](https://floating-thicket-23337.herokuapp.com)
 
@@ -43,10 +43,10 @@
 + ERD-Diagram with Omnigraffle erd.png
 + Use-Cases and User-Stories with Google Docs
 + Project-Planning with Trello
-[file.pdf](images/wdi-2-wireframes.pdf)
-![alt text](images/erd.png "ERD")
-![alt text](images/trello.png "Trello")
-![alt text](images/googledocs.png "Google Docs")
+[file.pdf](assets/images/wdi-2-wireframes.pdf)
+![alt text](assets/erd.png "ERD")
+![alt text](assets/trello.png "Trello")
+![alt text](assets/googledocs.png "Google Docs")
 
 
 ###Credits
