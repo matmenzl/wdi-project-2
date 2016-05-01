@@ -8,10 +8,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # def correct_user
-  #   @user == current_user
-  # end
-
   def index
     @q = User.search(params[:q])
     @users = @q.result(distinct: true)
@@ -33,12 +29,12 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update(user_params)
-      redirect_to user_path
+      redirect_to current_user
     else 
       render 'edit'
     end
   end
- 
+
   def show
     @user = User.find(params[:id])
   end
